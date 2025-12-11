@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Anisha</span></h1>
+      <p class="subtitle">Web Developer | Designer | Creator</p>
+      <p class="desc">
+        I build clean, responsive, and visually appealing websites that deliver seamless user experiences.
+      </p>
+      <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="scroll-fly">About Me</h2>
+    <p class="scroll-fly">
+      I’m a passionate web developer who loves turning creative ideas into digital reality.
+      My focus is on crafting modern, intuitive designs with strong attention to detail.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2 class="scroll-fly">Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3 class="scroll-fly">Portfolio Website</h3>
+        <p class="scroll-fly">A modern and responsive personal portfolio built with HTML, CSS, and JS.</p>
+      </div>
+      <div class="project-card">
+        <h3 class="scroll-fly">Landing Page</h3>
+        <p class="scroll-fly">A sleek landing page for a tech startup with smooth animations and gradients.</p>
+      </div>
+      <div class="project-card">
+        <h3 class="scroll-fly">Weather App</h3>
+        <p class="scroll-fly">Real-time weather tracking app with API integration and elegant UI.</p>
+        
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+
+  <!-- Contact Section -->
+   <br>
+   <br>
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <p>Feel free to reach out for collaborations or just a friendly chat.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="">
+    <p>© 2025 Your Name | Crafted with ❤️</p>
+  </footer>
+
+ 
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".scroll-fly").forEach(el => observer.observe(el));
+</script>
+
+ 
+</html>
